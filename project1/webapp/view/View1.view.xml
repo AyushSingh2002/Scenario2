@@ -1,0 +1,98 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="com.incture.project1.controller.View1">
+    
+    <Page id="page" title="{i18n>title}">
+        
+        <!-- Table with product data -->
+        <table:Table id="productTable" rows="{/Products}">
+            
+            <!-- Column for Product ID -->
+            <table:columns>
+                <table:Column>
+                    <Label text="Product ID"/>
+                    <table:template>
+                        <Text text="{ProductID}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Product Name -->
+                <table:Column>
+                    <Label text="Product"/>
+                    <table:template>
+                        <Text text="{ProductName}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Supplier ID -->
+                <table:Column>
+                    <Label text="Supplier ID"/>
+                    <table:template>
+                        <Text text="{SupplierID}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Category ID -->
+                <table:Column>
+                    <Label text="Category ID"/>
+                    <table:template>
+                        <Text text="{CategoryID}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Quantity Per Unit -->
+                <table:Column>
+                    <Label text="Quantity Per Unit"/>
+                    <table:template>
+                        <Text text="{QuantityPerUnit}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Unit Price -->
+                <table:Column>
+                    <Label text="Unit Price"/>
+                    <table:template>
+                        <Text text="{UnitPrice}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Units In Stock -->
+                <table:Column>
+                    <Label text="Units In Stock"/>
+                    <table:template>
+                        <Text text="{UnitsInStock}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Units On Order -->
+                <table:Column>
+                    <Label text="Units On Order"/>
+                    <table:template>
+                        <Text text="{UnitsOnOrder}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Reorder Level -->
+                <table:Column>
+                    <Label text="Reorder Level"/>
+                    <table:template>
+                        <Text text="{ReorderLevel}"/>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column for Discontinued -->
+                <table:Column>
+                    <Label text="Discontinued"/>
+                    <table:template>
+                        <Text text="{Discontinued}" />
+                    </table:template>
+                </table:Column>
+
+            </table:columns>
+            
+        </table:Table>
+        
+    </Page>
+
+</mvc:View>
