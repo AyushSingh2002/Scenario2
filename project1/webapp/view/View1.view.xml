@@ -3,7 +3,21 @@
     xmlns="sap.m"
     controllerName="com.incture.project1.controller.View1">
     
-    <Page id="page" title="{i18n>title}">
+    <Page id="page">
+    
+        <Bar >
+            <contentMiddle>
+                <Text text="Product Inventory Viewer" class="txt"></Text>
+            </contentMiddle>
+        </Bar>
+        
+
+     <Toolbar>
+            <SearchField
+                id="categorySearch"
+                placeholder="Search by Category"
+                liveChange="onSearch" />
+        </Toolbar>
         
         <!-- Table with product data -->
         <table:Table id="productTable" rows="{/Products}">
@@ -92,6 +106,12 @@
             </table:columns>
             
         </table:Table>
+
+        <Toolbar>
+            <ToolbarSpacer/>
+            <Button text="Previous" press="onPrevPage"/>
+            <Button text="Next" press="onNextPage"/>
+        </Toolbar>
         
     </Page>
 
